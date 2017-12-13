@@ -31,20 +31,22 @@ int take_the_map(int fd, char *path)
 {
 	long long area = 0;
 	struct stat *st = malloc(sizeof(struct stat));;
-	char *map = NULL;
+	char *map_brut = NULL;
 	char *tmp = NULL;
 
 	if (stat(path, st) == -1)
 		return (84);
 	area = (long long)st->st_size;
-	map = malloc(sizeof(char) * area);
-	if (read(fd, map, area) == -1)
+	map_brut = malloc(sizeof(char) * area + 1);
+	if (read(fd, map_brut, area) == -1)
 		return (84);
-	tmp = map;
+	map_brut[area] = '\0';
+	tmp = map_brut;
 	while (*tmp != '.' && *tmp != 'o')
 		tmp = tmp + 1;
-	printf("%s", tmp);
-	free(map);
+	if (prepa_algo(tmp, map_brut) == 84)
+		return (84);
+	free(map_brut);
 	free(st);
 	return (0);
 }

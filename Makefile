@@ -6,6 +6,9 @@
 ##
 
 SRC	=	src/BSQ_main.c	\
+		src/prepa_algo.c	\
+		src/into_algo.c	\
+		src/cross_map.c	\
 
 OBJ	=	$(SRC:.c=.o)
 
@@ -14,7 +17,8 @@ CFLAGS	=	-Iinclude
 NAME	=	bsq
 
 $(NAME):	$(OBJ)
-	gcc -o $(NAME) $(OBJ)
+	make -Clib/my
+	gcc -o $(NAME) $(OBJ) -Llib/my -lmy
 
 all:	$(NAME)
 
@@ -23,5 +27,6 @@ clean:
 
 fclean:	clean
 	rm -f $(NAME)
+	make fclean -Clib/my
 
 re:	fclean all

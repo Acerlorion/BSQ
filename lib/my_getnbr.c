@@ -39,7 +39,7 @@ int strnbr_to_nbr(int i, int start_nbr, char const *str)
 	while (start_nbr < i) {
 		calcul = calcul + (str[start_nbr] - 48) * time_nbr;
 		start_nbr = start_nbr + 1;
-		time_nbr = time_nbr / 10; 
+		time_nbr = time_nbr / 10;
 	}
 	return (calcul);
 }

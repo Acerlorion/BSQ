@@ -5,7 +5,7 @@
 ## BSQ's Makefile
 ##
 
-SRC	=	src/BSQ_main.c	\
+SRC	=	src/bsq_main.c	\
 		src/prepa_algo.c	\
 		src/into_algo.c	\
 		src/cross_map.c	\

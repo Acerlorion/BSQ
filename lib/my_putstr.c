@@ -10,7 +10,7 @@
 
 int my_putstr(char const *str)
 {
-	int a = my_strlen(str);;
+	int a = my_strlen(str);
 
 	write(1, str, a);
 	return (0);

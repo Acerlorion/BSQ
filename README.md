@@ -14,9 +14,11 @@ Example :
 
 ./bsq [file]
 
-If you don't wand to create the map yourself, a script written in perl called 'generate_map' is here.
+If you don't want to create the map yourself, a script written in perl called 'generate_map' is here.
 You must give it the rights and specify some parameters.
 
 chmod +x generate_map
 
 ./generate_map [x] [y] [density]
+
+### Made by me, Paul BEAUDUC an Epitech student

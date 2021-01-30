@@ -1,6 +1,6 @@
 # BSQ
 
-'BSQ' is a project about finding the biggest square of '.' characters in a ap of 'o' and '.' characters.
+'BSQ' is a project about finding the biggest square of '.' characters in a map of 'o' and '.' characters.
 
 ## Building
 
